@@ -40,7 +40,18 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Interface\IAdminUserService.cs" />
+    <Compile Include="Interface\ICityService.cs" />
+    <Compile Include="Interface\IPermissionService.cs" />
+    <Compile Include="Interface\IRoleService.cs" />
+    <Compile Include="IServiceSupport.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Chat.DTO\Chat.DTO.csproj">
+      <Project>{DC1CE7C1-FC87-41EF-8045-30E85E93BCA9}</Project>
+      <Name>Chat.DTO</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
