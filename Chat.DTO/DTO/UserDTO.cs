@@ -4,9 +4,9 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Chat.DTO
+namespace Chat.DTO.DTO
 {
-    public class IdNameDTO
+    public class UserDTO
     {
     }
 }

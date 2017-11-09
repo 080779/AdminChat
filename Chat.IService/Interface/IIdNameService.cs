@@ -1,4 +1,5 @@
 ﻿using Chat.DTO;
+using Chat.DTO.DTO;
 using System;
 using System.Collections.Generic;
 using System.Linq;
