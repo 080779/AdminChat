@@ -10,15 +10,6 @@ namespace Chat.Service.ModelConfig
 {
     class UserConfig:EntityTypeConfiguration<UserEntity>
     {
-        public class a
-        {
-            public string Name { get; set; }
-            public string NickName { get; set; }
-            public string PhotoUrl { get; set; }
-            public string Mobile { get; set; }
-            public bool Gender { get; set; }
-            public string Address { get; set; }
-        }
         public UserConfig()
         {
 

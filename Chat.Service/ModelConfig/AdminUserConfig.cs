@@ -16,7 +16,8 @@ namespace Chat.Service.ModelConfig
         public AdminUserConfig()
         {
             ToTable("T_AdminUsers");
-
+            //WillCascadeOnDelete(false) 没有在这代码，有外键约束的时候。当删除外键会把主键的数据删除
+            //IsUnicode(false) 加上生成varchar类型，否则是nvarchar类型
             HasOptional(u => u.City).WithMany().HasForeignKey(u => u.CityId).WillCascadeOnDelete(false);
             HasMany(r => r.Roles).WithMany(u => u.AdminUsers).
                 Map(m => m.ToTable("T_AdminUserRoles").MapLeftKey("AdminUserId").MapRightKey("RoleId"));
