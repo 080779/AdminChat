@@ -40,10 +40,13 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Interface\IAdminLogService.cs" />
     <Compile Include="Interface\IAdminUserService.cs" />
     <Compile Include="Interface\ICityService.cs" />
+    <Compile Include="Interface\IIdNameService.cs" />
     <Compile Include="Interface\IPermissionService.cs" />
     <Compile Include="Interface\IRoleService.cs" />
+    <Compile Include="Interface\ISettingService.cs" />
     <Compile Include="IServiceSupport.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>

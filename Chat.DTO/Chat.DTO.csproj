@@ -44,6 +44,8 @@
     <Compile Include="DTO\CityDTO.cs" />
     <Compile Include="DTO\PermissionDTO.cs" />
     <Compile Include="DTO\RoleDTO.cs" />
+    <Compile Include="DTO\SettingDTO.cs" />
+    <Compile Include="IdNameDTO.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

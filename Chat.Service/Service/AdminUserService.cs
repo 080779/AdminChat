@@ -19,6 +19,7 @@ namespace Chat.Service.Service
             user.PasswordHash = password;
             user.PasswordSalt = password;
             user.LoginErrorTimes = 0;
+            //user.LastLoginErrorTime = DateTime.Now;
             user.Email = email;
             user.CityId = cityId;
             using (MyDbContext dbc = new MyDbContext())

@@ -5,6 +5,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using Chat.DTO.DTO;
+using Chat.Service.Entities;
 
 namespace Chat.Service.Service
 {
@@ -12,7 +13,22 @@ namespace Chat.Service.Service
     {
         public long AddNew(string cityName)
         {
-            throw new NotImplementedException();
+            CityEntity city = new CityEntity();
+            city.Name = cityName;
+            using (MyDbContext dbc = new MyDbContext())
+            {
+                CommonService<CityEntity> cs = new CommonService<CityEntity>(dbc);
+                if(cs.GetAll().Any(c=>c.Name==cityName))
+                {
+                    return 0;
+                }
+                else
+                {
+                    dbc.Cities.Add(city);
+                    dbc.SaveChanges();
+                    return city.Id;
+                }
+            }
         }
 
         public CityDTO[] GetAll()
