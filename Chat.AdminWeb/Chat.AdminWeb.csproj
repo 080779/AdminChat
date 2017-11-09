@@ -128,10 +128,6 @@
     <Folder Include="Models\" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\Chat.Common\Chat.Common.csproj">
-      <Project>{4805ee49-3b81-455a-aaae-812410cd138b}</Project>
-      <Name>Chat.Common</Name>
-    </ProjectReference>
     <ProjectReference Include="..\Chat.DTO\Chat.DTO.csproj">
       <Project>{dc1ce7c1-fc87-41ef-8045-30e85e93bca9}</Project>
       <Name>Chat.DTO</Name>
