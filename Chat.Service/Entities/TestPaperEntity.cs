@@ -4,10 +4,10 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Chat.DTO.DTO
+namespace Chat.Service.Entities
 {
-    public class RoleDTO:BaseDTO
+    public class TestPaperEntity:BaseEntity
     {
-        public string Name { get; set; }
+        public string TestTitle { get; set; }
     }
 }

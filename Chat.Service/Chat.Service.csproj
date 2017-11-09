@@ -54,10 +54,12 @@
     <Compile Include="Entities\AdminUserEntity.cs" />
     <Compile Include="Entities\BaseEntity.cs" />
     <Compile Include="Entities\CityEntity.cs" />
+    <Compile Include="Entities\ExercisesEntity.cs" />
     <Compile Include="Entities\IdNameEntity.cs" />
     <Compile Include="Entities\PermissionEntity.cs" />
     <Compile Include="Entities\RoleEntity.cs" />
     <Compile Include="Entities\SettingEntity.cs" />
+    <Compile Include="Entities\TestPaperEntity.cs" />
     <Compile Include="Entities\UserEntity.cs" />
     <Compile Include="ModelConfig\AdminLogConfig.cs" />
     <Compile Include="ModelConfig\AdminUserConfig.cs" />

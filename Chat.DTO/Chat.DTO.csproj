@@ -40,6 +40,8 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="BaseDTO.cs" />
+    <Compile Include="DTO\AdminLogDTO.cs" />
     <Compile Include="DTO\AdminUserDTO.cs" />
     <Compile Include="DTO\CityDTO.cs" />
     <Compile Include="DTO\PermissionDTO.cs" />

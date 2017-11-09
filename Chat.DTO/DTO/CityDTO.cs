@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Chat.DTO.DTO
 {
-    public class CityDTO
+    public class CityDTO:BaseDTO
     {
     }
 }

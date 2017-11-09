@@ -6,7 +6,9 @@ using System.Threading.Tasks;
 
 namespace Chat.DTO.DTO
 {
-    public class PermissionDTO
+    public class PermissionDTO:BaseDTO
     {
+        public string Name { get; set; }
+        public string Description { get; set; }
     }
 }
