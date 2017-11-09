@@ -1,4 +1,5 @@
 ﻿using Chat.Service.Entities;
+using log4net;
 using System;
 using System.Collections.Generic;
 using System.Data.Entity;
@@ -14,11 +15,11 @@ namespace Chat.Service
     /// </summary>
     class MyDbContext : DbContext
     {
-        //private static ILog log = LogManager.GetLogger(typeof(MyDbContext));
+        private static ILog log = LogManager.GetLogger(typeof(MyDbContext));
         public MyDbContext() : base("name=connStr")
         {
             //Database.SetInitializer<MyDbContext>(null);
-            //this.Database.Log = sql => log.DebugFormat("EF执行SQL：{0}", sql);//数据操作记录日志
+            this.Database.Log = sql => log.DebugFormat("EF执行SQL：{0}", sql);//数据操作记录日志
         }
         protected override void OnModelCreating(DbModelBuilder modelBuilder)
         {

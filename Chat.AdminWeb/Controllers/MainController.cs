@@ -1,4 +1,6 @@
-﻿using System;
+﻿using Chat.IService.Interface;
+using Chat.Service.Service;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Web;
@@ -11,7 +13,9 @@ namespace Chat.AdminWeb.Controllers
         // GET: Main
         public ActionResult Index()
         {
-            return View();
+            ICityService cityService = new CityService();
+            long id = cityService.AddNew("南京");
+            return View(id);
         }
     }
 }

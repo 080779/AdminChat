@@ -20,7 +20,7 @@ namespace Chat.Service.Service
                 CommonService<CityEntity> cs = new CommonService<CityEntity>(dbc);
                 if(cs.GetAll().Any(c=>c.Name==cityName))
                 {
-                    return 0;
+                    throw new ArgumentException(cityName+"已经存在");
                 }
                 else
                 {

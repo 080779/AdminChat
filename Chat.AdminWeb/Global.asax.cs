@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Chat.AdminWeb.App_Start;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Web;
@@ -11,6 +12,10 @@ namespace Chat.AdminWeb
     {
         protected void Application_Start()
         {
+            log4net.Config.XmlConfigurator.Configure();
+
+            GlobalFilters.Filters.Add(new SYSExceptionFilter());
+
             AreaRegistration.RegisterAllAreas();
             RouteConfig.RegisterRoutes(RouteTable.Routes);
         }

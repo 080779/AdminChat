@@ -110,6 +110,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="App_Start\RouteConfig.cs" />
+    <Compile Include="App_Start\SYSExceptionFilter.cs" />
     <Compile Include="Controllers\MainController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
@@ -139,6 +140,10 @@
     <ProjectReference Include="..\Chat.IService\Chat.IService.csproj">
       <Project>{ee1591ca-ebbf-4c29-baf4-78f01ae2a5d0}</Project>
       <Name>Chat.IService</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Chat.Service\Chat.Service.csproj">
+      <Project>{1D7C08A8-8ED2-4A8F-A22B-FE1FEA8C869A}</Project>
+      <Name>Chat.Service</Name>
     </ProjectReference>
     <ProjectReference Include="..\Chat.WebCommon\Chat.WebCommon.csproj">
       <Project>{d9be0c2c-29c7-45a6-9542-1fa31960f500}</Project>
