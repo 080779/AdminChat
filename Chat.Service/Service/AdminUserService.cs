@@ -5,6 +5,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using Chat.DTO.DTO;
+using Chat.Service.Entities;
 
 namespace Chat.Service.Service
 {
@@ -12,7 +13,29 @@ namespace Chat.Service.Service
     {
         public long AddAdminUser(string name, string phoneNum, string password, string email, long? cityId)
         {
-            throw new NotImplementedException();
+            AdminUserEntity user = new AdminUserEntity();
+            user.Name = name;
+            user.PhoneNum = phoneNum;
+            user.PasswordHash = password;
+            user.PasswordSalt = password;
+            user.LoginErrorTimes = 0;
+            user.Email = email;
+            user.CityId = cityId;
+            using (MyDbContext dbc = new MyDbContext())
+            {
+                CommonService<AdminUserEntity> cs = new CommonService<AdminUserEntity>(dbc);
+                bool exists= cs.GetAll().Any(a => a.PhoneNum == phoneNum);
+                if(exists)
+                {
+                    throw new ArgumentException("手机号:" + phoneNum + "已经存在");
+                }
+                else
+                {
+                    dbc.AdminUsers.Add(user);
+                    dbc.SaveChanges();
+                    return user.Id;
+                }
+            }
         }
 
         public bool CheckLogin(string phoneNum, string password)
