@@ -5,6 +5,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using Chat.DTO.DTO;
+using Chat.Service;
 using Chat.Service.Entities;
 
 namespace Chat.Service.Service
