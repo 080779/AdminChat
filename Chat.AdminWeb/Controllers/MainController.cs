@@ -16,8 +16,33 @@ namespace Chat.AdminWeb.Controllers
         public ActionResult Index()
         {
             //long id = cityService.AddNew("南阳");
-            long id = adminService.AddAdminUser("32", "17779896652", "1234243", "123@qq.com", 1);
-            return View(id);
+            //long id = adminService.AddAdminUser("32", "17779896652", "1234243", "123@qq.com", 1);
+            return View();
+        }
+
+        public ActionResult Login()
+        {
+            return View();
+        }
+
+        public ActionResult AddAdminUser()
+        {
+            return View();
+        }
+
+        public ActionResult AdminUserList()
+        {
+            return View();
+        }
+
+        public ActionResult AdminRoleList()
+        {
+            return View();
+        }
+
+        public ActionResult AdminPermissionList()
+        {
+            return View();
         }
     }
 }

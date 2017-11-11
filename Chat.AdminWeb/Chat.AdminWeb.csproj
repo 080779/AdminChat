@@ -114,6 +114,7 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="css\H-ui.admin.css" />
+    <Content Include="css\H-ui.login.css" />
     <Content Include="css\H-ui.min.css" />
     <Content Include="css\style.css" />
     <Content Include="favicon.ico" />
@@ -148,6 +149,18 @@
     <Content Include="js\jquery-1.8.3.min.js" />
     <Content Include="js\template.js" />
     <Content Include="lib\Hui-iconfont\1.0.1\iconfont.css" />
+    <Content Include="lib\icheck\aero.png" />
+    <Content Include="lib\icheck\blue.png" />
+    <Content Include="lib\icheck\green.png" />
+    <Content Include="lib\icheck\grey.png" />
+    <Content Include="lib\icheck\icheck.css" />
+    <Content Include="lib\icheck\jquery.icheck.min.js" />
+    <Content Include="lib\icheck\minimal.png" />
+    <Content Include="lib\icheck\orange.png" />
+    <Content Include="lib\icheck\pink.png" />
+    <Content Include="lib\icheck\purple.png" />
+    <Content Include="lib\icheck\red.png" />
+    <Content Include="lib\icheck\yellow.png" />
     <Content Include="lib\jquery\1.9.1\jquery.js" />
     <Content Include="lib\jquery\1.9.1\jquery.min.js" />
     <Content Include="lib\layer\1.9.3\extend\layer.ext.js" />
@@ -161,6 +174,27 @@
     <Content Include="lib\layer\1.9.3\skin\layer.ext.css" />
     <Content Include="lib\layer\1.9.3\skin\mono\default.png" />
     <Content Include="lib\layer\1.9.3\skin\mono\style.css" />
+    <Content Include="lib\laypage\1.2\laypage.js" />
+    <Content Include="lib\laypage\1.2\skin\laypage.css" />
+    <Content Include="lib\My97DatePicker\calendar.js" />
+    <Content Include="lib\My97DatePicker\lang\en.js" />
+    <Content Include="lib\My97DatePicker\lang\zh-cn.js" />
+    <Content Include="lib\My97DatePicker\lang\zh-tw.js" />
+    <Content Include="lib\My97DatePicker\skin\datePicker.gif" />
+    <Content Include="lib\My97DatePicker\skin\default\datepicker.css" />
+    <Content Include="lib\My97DatePicker\skin\default\img.gif" />
+    <Content Include="lib\My97DatePicker\skin\twoer\datepicker-dev.css" />
+    <Content Include="lib\My97DatePicker\skin\twoer\datepicker.css" />
+    <Content Include="lib\My97DatePicker\skin\twoer\img.gif" />
+    <Content Include="lib\My97DatePicker\skin\twoer\img.png" />
+    <Content Include="lib\My97DatePicker\skin\WdatePicker.css" />
+    <Content Include="lib\My97DatePicker\skin\whyGreen\bg.jpg" />
+    <Content Include="lib\My97DatePicker\skin\whyGreen\datepicker.css" />
+    <Content Include="lib\My97DatePicker\skin\whyGreen\img.gif" />
+    <Content Include="lib\My97DatePicker\WdatePicker.js" />
+    <Content Include="lib\Validform\5.3.2\passwordStrength-min.js" />
+    <Content Include="lib\Validform\5.3.2\Validform.js" />
+    <Content Include="lib\Validform\5.3.2\Validform.min.js" />
     <Content Include="skin\blue\acrossTab-bg.png" />
     <Content Include="skin\blue\acrossTab.png" />
     <Content Include="skin\blue\icon_arrow.png" />
@@ -206,6 +240,13 @@
     <Content Include="skin\orange\Thumbs.db" />
     <Content Include="skin\red\Thumbs.db" />
     <Content Include="skin\yellow\Thumbs.db" />
+    <Content Include="Views\Main\Login.cshtml" />
+    <Content Include="Views\Main\AddAdminUser.cshtml" />
+    <Content Include="lib\icheck\Thumbs.db" />
+    <Content Include="Views\Main\AdminUserList.cshtml" />
+    <Content Include="lib\My97DatePicker\skin\Thumbs.db" />
+    <Content Include="Views\Main\AdminRoleList.cshtml" />
+    <Content Include="Views\Main\AdminPermissionList.cshtml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
