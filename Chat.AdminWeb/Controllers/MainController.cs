@@ -13,9 +13,9 @@ namespace Chat.AdminWeb.Controllers
         // GET: Main
         public ActionResult Index()
         {
-            ICityService cityService = new CityService();
-            long id = cityService.AddNew("南京");
-            return View(id);
+            //ICityService cityService = new CityService();
+            //long id = cityService.AddNew("南京");
+            return View();
         }
     }
 }
