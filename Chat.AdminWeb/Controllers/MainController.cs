@@ -23,26 +23,6 @@ namespace Chat.AdminWeb.Controllers
         public ActionResult Login()
         {
             return View();
-        }
-
-        public ActionResult AddAdminUser()
-        {
-            return View();
-        }
-
-        public ActionResult AdminUserList()
-        {
-            return View();
-        }
-
-        public ActionResult AdminRoleList()
-        {
-            return View();
-        }
-
-        public ActionResult AdminPermissionList()
-        {
-            return View();
-        }
+        }               
     }
 }

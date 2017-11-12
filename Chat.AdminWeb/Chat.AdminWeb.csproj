@@ -223,7 +223,10 @@
   <ItemGroup>
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="App_Start\SYSExceptionFilter.cs" />
+    <Compile Include="Controllers\AdminUserController.cs" />
     <Compile Include="Controllers\MainController.cs" />
+    <Compile Include="Controllers\PermissionController.cs" />
+    <Compile Include="Controllers\RoleController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
@@ -241,12 +244,12 @@
     <Content Include="skin\red\Thumbs.db" />
     <Content Include="skin\yellow\Thumbs.db" />
     <Content Include="Views\Main\Login.cshtml" />
-    <Content Include="Views\Main\AddAdminUser.cshtml" />
+    <Content Include="Views\AdminUser\Add.cshtml" />
     <Content Include="lib\icheck\Thumbs.db" />
-    <Content Include="Views\Main\AdminUserList.cshtml" />
+    <Content Include="Views\AdminUser\List.cshtml" />
     <Content Include="lib\My97DatePicker\skin\Thumbs.db" />
-    <Content Include="Views\Main\AdminRoleList.cshtml" />
-    <Content Include="Views\Main\AdminPermissionList.cshtml" />
+    <Content Include="Views\Role\List.cshtml" />
+    <Content Include="Views\Permission\List.cshtml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
