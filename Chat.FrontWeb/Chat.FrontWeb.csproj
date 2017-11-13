@@ -174,13 +174,17 @@
     <Folder Include="Models\" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\Chat.AdminWeb\Chat.AdminWeb.csproj">
-      <Project>{599DA1E7-9F8B-4FCD-AA48-664ACA2725D4}</Project>
-      <Name>Chat.AdminWeb</Name>
+    <ProjectReference Include="..\Chat.DTO\Chat.DTO.csproj">
+      <Project>{dc1ce7c1-fc87-41ef-8045-30e85e93bca9}</Project>
+      <Name>Chat.DTO</Name>
     </ProjectReference>
     <ProjectReference Include="..\Chat.IService\Chat.IService.csproj">
       <Project>{EE1591CA-EBBF-4C29-BAF4-78F01AE2A5D0}</Project>
       <Name>Chat.IService</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Chat.Service\Chat.Service.csproj">
+      <Project>{1d7c08a8-8ed2-4a8f-a22b-fe1fea8c869a}</Project>
+      <Name>Chat.Service</Name>
     </ProjectReference>
     <ProjectReference Include="..\Chat.WebCommon\Chat.WebCommon.csproj">
       <Project>{D9BE0C2C-29C7-45A6-9542-1FA31960F500}</Project>

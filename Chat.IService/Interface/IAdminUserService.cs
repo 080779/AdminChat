@@ -23,8 +23,10 @@ namespace Chat.IService.Interface
         AdminUserDTO GetById(long id);
         //根据手机号获取 DTO
         AdminUserDTO GetByPhoneNum(String phoneNum);
+        //根据用户名获取DTO
+        AdminUserDTO GetByName(String name);
         //检查用户名密码是否正确
-        bool CheckLogin(String phoneNum, String password);
+        bool CheckLogin(String name, String password);
         //软删除
         bool MarkDeleted(long adminUserId);
         //判断 adminUserId 这个用户是否有 permissionName 这个权限项（举个例子）

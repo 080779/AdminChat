@@ -1,8 +1,11 @@
-﻿using Chat.IService.Interface;
+﻿using CaptchaGen;
+using Chat.AdminWeb.Models;
+using Chat.IService.Interface;
 using Chat.Service;
 using Chat.WebCommon;
 using System;
 using System.Collections.Generic;
+using System.IO;
 using System.Linq;
 using System.Web;
 using System.Web.Mvc;
@@ -11,17 +14,10 @@ namespace Chat.AdminWeb.Controllers
 {   
     public class MainController : Controller
     {
-        public ICityService cityService { get; set; }
-        public IAdminUserService adminService { get; set; }
-        public IUserService userService { get; set; }
-        public IExercisesService exercisesService { get; set; }        
+        public IAdminUserService adminService { get; set; }   
 
         public ActionResult Index()
         {
-            //long id = cityService.AddNew("南阳");
-            //long id = adminService.AddAdminUser("32", "17779896652", "1234243", "123@qq.com");
-            //long id = userService.AddNew("123", "34e", "qwewew", "34111132455", true, "34rretfsfd");
-            //exercisesService.AddNew("这是什么鸟", 2, "乌鸦", "麻雀", "老鹰", "鹦鹉", 1);
             return View();
         }
 
@@ -30,19 +26,34 @@ namespace Chat.AdminWeb.Controllers
             return View();
         }
 
-        public ActionResult JsonTest()
+        [HttpPost]
+        public ActionResult Login(LoginModel model)
         {
-            Person p = new Person();
-            p.Name = "12321";
-            p.Age = 12;
-
-            return Json(new AjaxResult { Status="ok", ErrorMsg = "12321",Data=p});
+            if (!ModelState.IsValid)
+            {
+                return Json(new AjaxResult { Status = "error", ErrorMsg = MVCHelper.GetValidMsg(ModelState) });
+            }
+            if (model.VerifyCode != (string)TempData["verifyCode"])
+            {
+                return Json(new AjaxResult { Status = "error", ErrorMsg = "验证码错误" });
+            }
+            if (adminService.CheckLogin(model.Name, model.Password))
+            {
+                Session["AdminUserId"] = adminService.GetByName(model.Name).Id;
+                return Json(new AjaxResult { Status = "ok" });
+            }
+            else
+            {
+                return Json(new AjaxResult { Status = "error", ErrorMsg = "用户名密码错误" });
+            }
         }
 
-        public class Person
+        public ActionResult CreateVerify()
         {
-            public string Name { get; set; }
-            public int Age { get; set; }
+            string verifyCode = CommonHelper.GetCaptcha(4);
+            TempData["verifyCode"] = verifyCode;
+            MemoryStream ms = ImageFactory.GenerateImage(verifyCode, 45, 70, 15, 2); 
+            return File(ms, "image/jpeg");
         }
     }
 }

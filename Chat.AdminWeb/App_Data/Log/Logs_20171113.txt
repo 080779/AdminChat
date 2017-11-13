@@ -3387,3 +3387,263 @@ WHERE t.TABLE_SCHEMA + '.' + t.TABLE_NAME IN ('dbo.T_Activities','dbo.T_Activity
 
 2017-11-13 11:33:48,131 [57] DEBUG Chat.Service.MyDbContext - EF执行SQL：Closed connection at 2017/11/13 11:33:48 +08:00
 
+2017-11-13 21:18:24,930 [40] DEBUG Chat.Service.MyDbContext - EF执行SQL：Opened connection at 2017/11/13 21:18:24 +08:00
+
+2017-11-13 21:18:24,938 [40] DEBUG Chat.Service.MyDbContext - EF执行SQL：
+SELECT Count(*)
+FROM INFORMATION_SCHEMA.TABLES AS t
+WHERE t.TABLE_SCHEMA + '.' + t.TABLE_NAME IN ('dbo.T_Activities','dbo.T_Users','dbo.T_ActivityImgs','dbo.T_AdminLogs','dbo.T_AdminUsers','dbo.T_Roles','dbo.T_Permissions','dbo.T_Cities','dbo.T_Exercises','dbo.T_IdNames','dbo.T_TestPapers','dbo.T_Settings','dbo.T_UserActivities','dbo.T_RolePermissions','dbo.T_AdminUserRoles')
+    OR t.TABLE_NAME = 'EdmMetadata'
+2017-11-13 21:18:24,938 [40] DEBUG Chat.Service.MyDbContext - EF执行SQL：
+
+2017-11-13 21:18:24,938 [40] DEBUG Chat.Service.MyDbContext - EF执行SQL：-- Executing at 2017/11/13 21:18:24 +08:00
+
+2017-11-13 21:18:24,954 [40] DEBUG Chat.Service.MyDbContext - EF执行SQL：-- Completed in 15 ms with result: 15
+
+2017-11-13 21:18:24,954 [40] DEBUG Chat.Service.MyDbContext - EF执行SQL：
+
+2017-11-13 21:18:24,954 [40] DEBUG Chat.Service.MyDbContext - EF执行SQL：Closed connection at 2017/11/13 21:18:24 +08:00
+
+2017-11-13 21:18:25,010 [40] DEBUG Chat.Service.MyDbContext - EF执行SQL：Opened connection at 2017/11/13 21:18:25 +08:00
+
+2017-11-13 21:18:25,065 [40] DEBUG Chat.Service.MyDbContext - EF执行SQL：SELECT 
+    [GroupBy1].[A1] AS [C1]
+    FROM ( SELECT 
+        COUNT(1) AS [A1]
+        FROM [dbo].[__MigrationHistory] AS [Extent1]
+        WHERE [Extent1].[ContextKey] = @p__linq__0
+    )  AS [GroupBy1]
+2017-11-13 21:18:25,065 [40] DEBUG Chat.Service.MyDbContext - EF执行SQL：
+
+2017-11-13 21:18:25,066 [40] DEBUG Chat.Service.MyDbContext - EF执行SQL：-- p__linq__0: 'Chat.Service.MyDbContext' (Type = String, Size = 4000)
+
+2017-11-13 21:18:25,066 [40] DEBUG Chat.Service.MyDbContext - EF执行SQL：-- Executing at 2017/11/13 21:18:25 +08:00
+
+2017-11-13 21:18:25,068 [40] DEBUG Chat.Service.MyDbContext - EF执行SQL：-- Completed in 1 ms with result: SqlDataReader
+
+2017-11-13 21:18:25,068 [40] DEBUG Chat.Service.MyDbContext - EF执行SQL：
+
+2017-11-13 21:18:25,070 [40] DEBUG Chat.Service.MyDbContext - EF执行SQL：Closed connection at 2017/11/13 21:18:25 +08:00
+
+2017-11-13 21:18:25,072 [40] DEBUG Chat.Service.MyDbContext - EF执行SQL：Opened connection at 2017/11/13 21:18:25 +08:00
+
+2017-11-13 21:18:25,077 [40] DEBUG Chat.Service.MyDbContext - EF执行SQL：SELECT TOP (1) 
+    [Project1].[C1] AS [C1], 
+    [Project1].[MigrationId] AS [MigrationId], 
+    [Project1].[Model] AS [Model], 
+    [Project1].[ProductVersion] AS [ProductVersion]
+    FROM ( SELECT 
+        [Extent1].[MigrationId] AS [MigrationId], 
+        [Extent1].[Model] AS [Model], 
+        [Extent1].[ProductVersion] AS [ProductVersion], 
+        1 AS [C1]
+        FROM [dbo].[__MigrationHistory] AS [Extent1]
+        WHERE [Extent1].[ContextKey] = @p__linq__0
+    )  AS [Project1]
+    ORDER BY [Project1].[MigrationId] DESC
+2017-11-13 21:18:25,077 [40] DEBUG Chat.Service.MyDbContext - EF执行SQL：
+
+2017-11-13 21:18:25,077 [40] DEBUG Chat.Service.MyDbContext - EF执行SQL：-- p__linq__0: 'Chat.Service.MyDbContext' (Type = String, Size = 4000)
+
+2017-11-13 21:18:25,077 [40] DEBUG Chat.Service.MyDbContext - EF执行SQL：-- Executing at 2017/11/13 21:18:25 +08:00
+
+2017-11-13 21:18:25,078 [40] DEBUG Chat.Service.MyDbContext - EF执行SQL：-- Completed in 0 ms with result: SqlDataReader
+
+2017-11-13 21:18:25,078 [40] DEBUG Chat.Service.MyDbContext - EF执行SQL：
+
+2017-11-13 21:18:25,078 [40] DEBUG Chat.Service.MyDbContext - EF执行SQL：Closed connection at 2017/11/13 21:18:25 +08:00
+
+2017-11-13 21:18:25,086 [40] DEBUG Chat.Service.MyDbContext - EF执行SQL：Opened connection at 2017/11/13 21:18:25 +08:00
+
+2017-11-13 21:18:25,113 [40] DEBUG Chat.Service.MyDbContext - EF执行SQL：SELECT 
+    1 AS [C1], 
+    [Extent1].[Id] AS [Id], 
+    [Extent1].[Name] AS [Name], 
+    [Extent1].[Description] AS [Description], 
+    [Extent1].[CreateDateTime] AS [CreateDateTime]
+    FROM [dbo].[T_Roles] AS [Extent1]
+    WHERE 0 = [Extent1].[IsDeleted]
+2017-11-13 21:18:25,113 [40] DEBUG Chat.Service.MyDbContext - EF执行SQL：
+
+2017-11-13 21:18:25,113 [40] DEBUG Chat.Service.MyDbContext - EF执行SQL：-- Executing at 2017/11/13 21:18:25 +08:00
+
+2017-11-13 21:18:25,114 [40] DEBUG Chat.Service.MyDbContext - EF执行SQL：-- Completed in 1 ms with result: SqlDataReader
+
+2017-11-13 21:18:25,114 [40] DEBUG Chat.Service.MyDbContext - EF执行SQL：
+
+2017-11-13 21:18:25,114 [40] DEBUG Chat.Service.MyDbContext - EF执行SQL：Closed connection at 2017/11/13 21:18:25 +08:00
+
+2017-11-13 21:18:25,645 [41] DEBUG Chat.Service.MyDbContext - EF执行SQL：Opened connection at 2017/11/13 21:18:25 +08:00
+
+2017-11-13 21:18:25,667 [41] DEBUG Chat.Service.MyDbContext - EF执行SQL：SELECT 
+    [Extent1].[Id] AS [Id], 
+    [Extent1].[Name] AS [Name], 
+    [Extent1].[Mobile] AS [Mobile], 
+    [Extent1].[Gender] AS [Gender], 
+    [Extent1].[PasswordSalt] AS [PasswordSalt], 
+    [Extent1].[PasswordHash] AS [PasswordHash], 
+    [Extent1].[Email] AS [Email], 
+    [Extent1].[LoginErrorTimes] AS [LoginErrorTimes], 
+    [Extent1].[LastLoginErrorTime] AS [LastLoginErrorTime], 
+    [Extent1].[IsDeleted] AS [IsDeleted], 
+    [Extent1].[CreateDateTime] AS [CreateDateTime]
+    FROM [dbo].[T_AdminUsers] AS [Extent1]
+    WHERE 0 = [Extent1].[IsDeleted]
+2017-11-13 21:18:25,667 [41] DEBUG Chat.Service.MyDbContext - EF执行SQL：
+
+2017-11-13 21:18:25,667 [41] DEBUG Chat.Service.MyDbContext - EF执行SQL：-- Executing at 2017/11/13 21:18:25 +08:00
+
+2017-11-13 21:18:25,678 [35] DEBUG Chat.Service.MyDbContext - EF执行SQL：Opened connection at 2017/11/13 21:18:25 +08:00
+
+2017-11-13 21:18:25,679 [35] DEBUG Chat.Service.MyDbContext - EF执行SQL：SELECT 
+    [Extent1].[Id] AS [Id], 
+    [Extent1].[Name] AS [Name], 
+    [Extent1].[Mobile] AS [Mobile], 
+    [Extent1].[Gender] AS [Gender], 
+    [Extent1].[PasswordSalt] AS [PasswordSalt], 
+    [Extent1].[PasswordHash] AS [PasswordHash], 
+    [Extent1].[Email] AS [Email], 
+    [Extent1].[LoginErrorTimes] AS [LoginErrorTimes], 
+    [Extent1].[LastLoginErrorTime] AS [LastLoginErrorTime], 
+    [Extent1].[IsDeleted] AS [IsDeleted], 
+    [Extent1].[CreateDateTime] AS [CreateDateTime]
+    FROM [dbo].[T_AdminUsers] AS [Extent1]
+    WHERE 0 = [Extent1].[IsDeleted]
+2017-11-13 21:18:25,679 [35] DEBUG Chat.Service.MyDbContext - EF执行SQL：
+
+2017-11-13 21:18:25,679 [35] DEBUG Chat.Service.MyDbContext - EF执行SQL：-- Executing at 2017/11/13 21:18:25 +08:00
+
+2017-11-13 21:18:25,680 [35] DEBUG Chat.Service.MyDbContext - EF执行SQL：-- Completed in 1 ms with result: SqlDataReader
+
+2017-11-13 21:18:25,680 [35] DEBUG Chat.Service.MyDbContext - EF执行SQL：
+
+2017-11-13 21:18:25,680 [35] DEBUG Chat.Service.MyDbContext - EF执行SQL：Closed connection at 2017/11/13 21:18:25 +08:00
+
+2017-11-13 21:18:25,691 [41] DEBUG Chat.Service.MyDbContext - EF执行SQL：-- Completed in 1 ms with result: SqlDataReader
+
+2017-11-13 21:18:25,691 [41] DEBUG Chat.Service.MyDbContext - EF执行SQL：
+
+2017-11-13 21:18:25,692 [41] DEBUG Chat.Service.MyDbContext - EF执行SQL：Closed connection at 2017/11/13 21:18:25 +08:00
+
+2017-11-13 22:21:57,012 [69] DEBUG Chat.Service.MyDbContext - EF执行SQL：Opened connection at 2017/11/13 22:21:57 +08:00
+
+2017-11-13 22:21:57,019 [69] DEBUG Chat.Service.MyDbContext - EF执行SQL：
+SELECT Count(*)
+FROM INFORMATION_SCHEMA.TABLES AS t
+WHERE t.TABLE_SCHEMA + '.' + t.TABLE_NAME IN ('dbo.T_Activities','dbo.T_Users','dbo.T_ActivityImgs','dbo.T_AdminLogs','dbo.T_AdminUsers','dbo.T_Roles','dbo.T_Permissions','dbo.T_Cities','dbo.T_Exercises','dbo.T_IdNames','dbo.T_TestPapers','dbo.T_Settings','dbo.T_UserActivities','dbo.T_RolePermissions','dbo.T_AdminUserRoles')
+    OR t.TABLE_NAME = 'EdmMetadata'
+2017-11-13 22:21:57,019 [69] DEBUG Chat.Service.MyDbContext - EF执行SQL：
+
+2017-11-13 22:21:57,019 [69] DEBUG Chat.Service.MyDbContext - EF执行SQL：-- Executing at 2017/11/13 22:21:57 +08:00
+
+2017-11-13 22:21:57,027 [69] DEBUG Chat.Service.MyDbContext - EF执行SQL：-- Completed in 7 ms with result: 15
+
+2017-11-13 22:21:57,027 [69] DEBUG Chat.Service.MyDbContext - EF执行SQL：
+
+2017-11-13 22:21:57,027 [69] DEBUG Chat.Service.MyDbContext - EF执行SQL：Closed connection at 2017/11/13 22:21:57 +08:00
+
+2017-11-13 22:21:57,089 [69] DEBUG Chat.Service.MyDbContext - EF执行SQL：Opened connection at 2017/11/13 22:21:57 +08:00
+
+2017-11-13 22:21:57,625 [69] DEBUG Chat.Service.MyDbContext - EF执行SQL：SELECT 
+    [GroupBy1].[A1] AS [C1]
+    FROM ( SELECT 
+        COUNT(1) AS [A1]
+        FROM [dbo].[__MigrationHistory] AS [Extent1]
+        WHERE [Extent1].[ContextKey] = @p__linq__0
+    )  AS [GroupBy1]
+2017-11-13 22:21:57,625 [69] DEBUG Chat.Service.MyDbContext - EF执行SQL：
+
+2017-11-13 22:21:57,626 [69] DEBUG Chat.Service.MyDbContext - EF执行SQL：-- p__linq__0: 'Chat.Service.MyDbContext' (Type = String, Size = 4000)
+
+2017-11-13 22:21:57,626 [69] DEBUG Chat.Service.MyDbContext - EF执行SQL：-- Executing at 2017/11/13 22:21:57 +08:00
+
+2017-11-13 22:21:57,627 [69] DEBUG Chat.Service.MyDbContext - EF执行SQL：-- Completed in 1 ms with result: SqlDataReader
+
+2017-11-13 22:21:57,627 [69] DEBUG Chat.Service.MyDbContext - EF执行SQL：
+
+2017-11-13 22:21:57,631 [69] DEBUG Chat.Service.MyDbContext - EF执行SQL：Closed connection at 2017/11/13 22:21:57 +08:00
+
+2017-11-13 22:21:57,637 [69] DEBUG Chat.Service.MyDbContext - EF执行SQL：Opened connection at 2017/11/13 22:21:57 +08:00
+
+2017-11-13 22:21:57,675 [69] DEBUG Chat.Service.MyDbContext - EF执行SQL：SELECT TOP (1) 
+    [Project1].[C1] AS [C1], 
+    [Project1].[MigrationId] AS [MigrationId], 
+    [Project1].[Model] AS [Model], 
+    [Project1].[ProductVersion] AS [ProductVersion]
+    FROM ( SELECT 
+        [Extent1].[MigrationId] AS [MigrationId], 
+        [Extent1].[Model] AS [Model], 
+        [Extent1].[ProductVersion] AS [ProductVersion], 
+        1 AS [C1]
+        FROM [dbo].[__MigrationHistory] AS [Extent1]
+        WHERE [Extent1].[ContextKey] = @p__linq__0
+    )  AS [Project1]
+    ORDER BY [Project1].[MigrationId] DESC
+2017-11-13 22:21:57,675 [69] DEBUG Chat.Service.MyDbContext - EF执行SQL：
+
+2017-11-13 22:21:57,675 [69] DEBUG Chat.Service.MyDbContext - EF执行SQL：-- p__linq__0: 'Chat.Service.MyDbContext' (Type = String, Size = 4000)
+
+2017-11-13 22:21:57,675 [69] DEBUG Chat.Service.MyDbContext - EF执行SQL：-- Executing at 2017/11/13 22:21:57 +08:00
+
+2017-11-13 22:21:57,676 [69] DEBUG Chat.Service.MyDbContext - EF执行SQL：-- Completed in 0 ms with result: SqlDataReader
+
+2017-11-13 22:21:57,676 [69] DEBUG Chat.Service.MyDbContext - EF执行SQL：
+
+2017-11-13 22:21:57,679 [69] DEBUG Chat.Service.MyDbContext - EF执行SQL：Closed connection at 2017/11/13 22:21:57 +08:00
+
+2017-11-13 22:21:57,722 [69] DEBUG Chat.Service.MyDbContext - EF执行SQL：Opened connection at 2017/11/13 22:21:57 +08:00
+
+2017-11-13 22:21:57,826 [69] DEBUG Chat.Service.MyDbContext - EF执行SQL：SELECT TOP (2) 
+    [Extent1].[Id] AS [Id], 
+    [Extent1].[Name] AS [Name], 
+    [Extent1].[Mobile] AS [Mobile], 
+    [Extent1].[Gender] AS [Gender], 
+    [Extent1].[PasswordSalt] AS [PasswordSalt], 
+    [Extent1].[PasswordHash] AS [PasswordHash], 
+    [Extent1].[Email] AS [Email], 
+    [Extent1].[LoginErrorTimes] AS [LoginErrorTimes], 
+    [Extent1].[LastLoginErrorTime] AS [LastLoginErrorTime], 
+    [Extent1].[IsDeleted] AS [IsDeleted], 
+    [Extent1].[CreateDateTime] AS [CreateDateTime]
+    FROM [dbo].[T_AdminUsers] AS [Extent1]
+    WHERE (0 = [Extent1].[IsDeleted]) AND ([Extent1].[Name] = @p__linq__0)
+2017-11-13 22:21:57,826 [69] DEBUG Chat.Service.MyDbContext - EF执行SQL：
+
+2017-11-13 22:21:57,826 [69] DEBUG Chat.Service.MyDbContext - EF执行SQL：-- p__linq__0: 'sdfsaf' (Type = String, Size = 4000)
+
+2017-11-13 22:21:57,826 [69] DEBUG Chat.Service.MyDbContext - EF执行SQL：-- Executing at 2017/11/13 22:21:57 +08:00
+
+2017-11-13 22:21:57,828 [69] DEBUG Chat.Service.MyDbContext - EF执行SQL：-- Completed in 2 ms with result: SqlDataReader
+
+2017-11-13 22:21:57,828 [69] DEBUG Chat.Service.MyDbContext - EF执行SQL：
+
+2017-11-13 22:21:57,828 [69] DEBUG Chat.Service.MyDbContext - EF执行SQL：Closed connection at 2017/11/13 22:21:57 +08:00
+
+2017-11-13 22:23:30,039 [72] DEBUG Chat.Service.MyDbContext - EF执行SQL：Opened connection at 2017/11/13 22:23:30 +08:00
+
+2017-11-13 22:23:30,041 [72] DEBUG Chat.Service.MyDbContext - EF执行SQL：SELECT TOP (2) 
+    [Extent1].[Id] AS [Id], 
+    [Extent1].[Name] AS [Name], 
+    [Extent1].[Mobile] AS [Mobile], 
+    [Extent1].[Gender] AS [Gender], 
+    [Extent1].[PasswordSalt] AS [PasswordSalt], 
+    [Extent1].[PasswordHash] AS [PasswordHash], 
+    [Extent1].[Email] AS [Email], 
+    [Extent1].[LoginErrorTimes] AS [LoginErrorTimes], 
+    [Extent1].[LastLoginErrorTime] AS [LastLoginErrorTime], 
+    [Extent1].[IsDeleted] AS [IsDeleted], 
+    [Extent1].[CreateDateTime] AS [CreateDateTime]
+    FROM [dbo].[T_AdminUsers] AS [Extent1]
+    WHERE (0 = [Extent1].[IsDeleted]) AND ([Extent1].[Name] = @p__linq__0)
+2017-11-13 22:23:30,041 [72] DEBUG Chat.Service.MyDbContext - EF执行SQL：
+
+2017-11-13 22:23:30,041 [72] DEBUG Chat.Service.MyDbContext - EF执行SQL：-- p__linq__0: 'sdfrraq' (Type = String, Size = 4000)
+
+2017-11-13 22:23:30,041 [72] DEBUG Chat.Service.MyDbContext - EF执行SQL：-- Executing at 2017/11/13 22:23:30 +08:00
+
+2017-11-13 22:23:30,053 [72] DEBUG Chat.Service.MyDbContext - EF执行SQL：-- Completed in 12 ms with result: SqlDataReader
+
+2017-11-13 22:23:30,053 [72] DEBUG Chat.Service.MyDbContext - EF执行SQL：
+
+2017-11-13 22:23:30,054 [72] DEBUG Chat.Service.MyDbContext - EF执行SQL：Closed connection at 2017/11/13 22:23:30 +08:00
+

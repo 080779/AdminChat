@@ -7,6 +7,7 @@ using System.Threading.Tasks;
 using Chat.DTO.DTO;
 using Chat.Service;
 using Chat.Service.Entities;
+using Chat.WebCommon;
 
 namespace Chat.Service.Service
 {
@@ -40,9 +41,19 @@ namespace Chat.Service.Service
             }
         }
 
-        public bool CheckLogin(string phoneNum, string password)
+        public bool CheckLogin(string name, string password)
         {
-            throw new NotImplementedException();
+            using (MyDbContext dbc = new MyDbContext())
+            {
+                CommonService<AdminUserEntity> cs = new CommonService<AdminUserEntity>(dbc);
+                var user = cs.GetAll().SingleOrDefault(u => u.Name == name);
+                if (user == null)
+                {
+                    return false;
+                }
+                string pwdHash = CommonHelper.GetMD5(user.PasswordSalt + password);
+                return pwdHash == user.PasswordHash;
+            }
         }
 
         public AdminUserDTO ToDTO(AdminUserEntity user)
@@ -69,6 +80,28 @@ namespace Chat.Service.Service
         public AdminUserDTO GetById(long id)
         {
             throw new NotImplementedException();
+        }
+        
+        public AdminUserDTO GetByName(string name)
+        {
+            using (MyDbContext dbc = new MyDbContext())
+            {
+                CommonService<AdminUserEntity> cs = new CommonService<AdminUserEntity>(dbc);
+                var user = cs.GetAll().Where(u => u.Name == name);
+                int count = user.Count();
+                if (count == 0)
+                {
+                    return null;
+                }
+                else if (count == 1)
+                {
+                    return ToDTO(user.Single());
+                }
+                else
+                {
+                    throw new ArgumentException("找到用户名为：" + name + "的多条数据");
+                }
+            }
         }
 
         public AdminUserDTO GetByPhoneNum(string phoneNum)

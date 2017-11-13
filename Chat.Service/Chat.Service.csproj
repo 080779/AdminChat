@@ -102,6 +102,10 @@
       <Project>{ee1591ca-ebbf-4c29-baf4-78f01ae2a5d0}</Project>
       <Name>Chat.IService</Name>
     </ProjectReference>
+    <ProjectReference Include="..\Chat.WebCommon\Chat.WebCommon.csproj">
+      <Project>{D9BE0C2C-29C7-45A6-9542-1FA31960F500}</Project>
+      <Name>Chat.WebCommon</Name>
+    </ProjectReference>
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
