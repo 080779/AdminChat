@@ -18,6 +18,7 @@ namespace Chat.Service.ModelConfig
             ToTable("T_Roles");
             HasMany(r => r.Permissions).WithMany(p => p.Roles).Map(m => m.ToTable("T_RolePermissions").MapLeftKey("RoleId").MapRightKey("PermissionId"));
             Property(r => r.Name).HasMaxLength(50).IsRequired();
+            Property(r => r.Description).HasMaxLength(1024).IsRequired();
         }
     }
 }

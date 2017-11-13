@@ -12,7 +12,8 @@ namespace Chat.Service.Entities
     public class AdminUserEntity:BaseEntity
     {
         public string Name { get; set; }
-        public string PhoneNum { get; set; }
+        public string Mobile { get; set; }
+        public bool Gender { get; set; }
         public string PasswordSalt { get; set; }
         public string PasswordHash { get; set; }
         public string Email { get; set; }

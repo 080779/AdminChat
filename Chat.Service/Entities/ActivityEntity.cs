@@ -13,6 +13,8 @@ namespace Chat.Service.Entities
     {
         public string Name { get; set; }
         public string Description { get; set; }
+        public string Status { get; set; }
+        public virtual ICollection<UserEntity> Users { get; set; } = new List<UserEntity>();
         public DateTime StartTime { get; set; }
         public DateTime ExamEndTime { get; set; }
         public DateTime RewardTime { get; set; }

@@ -16,6 +16,7 @@ namespace Chat.Service.ModelConfig
 
             Property(a => a.Name).HasMaxLength(30).IsRequired();
             Property(a => a.Description).IsRequired();
+            Property(a => a.Status).HasMaxLength(10).IsRequired();
         }
     }
 }

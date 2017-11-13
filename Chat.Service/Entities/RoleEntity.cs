@@ -12,6 +12,7 @@ namespace Chat.Service.Entities
     public class RoleEntity:BaseEntity
     {
         public string Name { get; set; }
+        public string Description { get; set; }
         public virtual ICollection<AdminUserEntity> AdminUsers { get; set; } = new List<AdminUserEntity>();
         public virtual ICollection<PermissionEntity> Permissions { get; set; } = new List<PermissionEntity>();
     }

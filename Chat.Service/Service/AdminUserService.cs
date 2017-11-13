@@ -12,11 +12,11 @@ namespace Chat.Service.Service
 {
     public class AdminUserService : IAdminUserService
     {
-        public long AddAdminUser(string name, string phoneNum, string password, string email)
+        public long AddAdminUser(string name, string mobile, string password, string email)
         {
             AdminUserEntity user = new AdminUserEntity();
             user.Name = name;
-            user.PhoneNum = phoneNum;
+            user.Mobile = mobile;
             user.PasswordHash = password;
             user.PasswordSalt = password;
             user.LoginErrorTimes = 0;
@@ -26,10 +26,10 @@ namespace Chat.Service.Service
             using (MyDbContext dbc = new MyDbContext())
             {
                 CommonService<AdminUserEntity> cs = new CommonService<AdminUserEntity>(dbc);
-                bool exists= cs.GetAll().Any(a => a.PhoneNum == phoneNum);
+                bool exists= cs.GetAll().Any(a => a.Mobile == mobile);
                 if(exists)
                 {
-                    throw new ArgumentException("手机号:" + phoneNum + "已经存在");
+                    return -1;
                 }
                 else
                 {
@@ -45,9 +45,25 @@ namespace Chat.Service.Service
             throw new NotImplementedException();
         }
 
+        public AdminUserDTO ToDTO(AdminUserEntity user)
+        {
+            AdminUserDTO dto = new AdminUserDTO();
+            dto.CreateDateTime = user.CreateDateTime;
+            dto.Email = user.Email;
+            dto.Id = user.Id;
+            dto.Name = user.Name;
+            dto.Gender = user.Gender;
+            dto.Mobile = user.Mobile;
+            return dto;
+        }
+
         public AdminUserDTO[] GetAll()
         {
-            throw new NotImplementedException();
+            using (MyDbContext dbc = new MyDbContext())
+            {
+                CommonService<AdminUserEntity> cs = new CommonService<AdminUserEntity>(dbc);
+                return cs.GetAll().ToList().Select(a => ToDTO(a)).ToArray();
+            }
         }
                
         public AdminUserDTO GetById(long id)

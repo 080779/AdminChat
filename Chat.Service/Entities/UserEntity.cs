@@ -14,6 +14,7 @@ namespace Chat.Service.Entities
         public string Mobile { get; set; }
         public bool Gender { get; set; }
         public string Address { get; set; }
+        public virtual ICollection<ActivityEntity> Activities { get; set; } = new List<ActivityEntity>();
         public string PasswordSalt { get; set; }
         public string PasswordHash { get; set; }
         public int LoginErrorTimes { get; set; }

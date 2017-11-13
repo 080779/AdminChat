@@ -10,6 +10,7 @@ namespace Chat.DTO.DTO
     {
         public string Name { get; set; }
         public string Description { get; set; }
+        public string Status { get; set; }
         public DateTime StartTime { get; set; }
         public DateTime ExamEndTime { get; set; }
         public DateTime RewardTime { get; set; }

@@ -21,7 +21,7 @@ namespace Chat.Service.ModelConfig
             //HasOptional(u => u.City).WithMany().HasForeignKey(u => u.CityId).WillCascadeOnDelete(false);
             HasMany(r => r.Roles).WithMany(u => u.AdminUsers).Map(m => m.ToTable("T_AdminUserRoles").MapLeftKey("AdminUserId").MapRightKey("RoleId"));
             Property(u => u.Name).IsRequired().HasMaxLength(50);
-            Property(u => u.PhoneNum).HasMaxLength(20).IsRequired().IsUnicode(false);
+            Property(u => u.Mobile).HasMaxLength(20).IsRequired().IsUnicode(false);
             Property(u => u.PasswordSalt).HasMaxLength(20).IsRequired().IsUnicode(false);
             Property(u => u.PasswordHash).HasMaxLength(100).IsRequired().IsUnicode(false);
             Property(u => u.Email).HasMaxLength(30).IsRequired().IsUnicode(false);

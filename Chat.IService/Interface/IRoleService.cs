@@ -12,8 +12,8 @@ namespace Chat.IService.Interface
     /// </summary>
     public interface IRoleService : IServiceSupport
     {
-        long AddNew(string roleName);
-        void Update(long roleId, string roleName);
+        long AddNew(string roleName,string description);
+        void Update(long roleId, string roleName,string description);
         bool MarkDeleted(long roleId);
         RoleDTO GetById(long id);
         RoleDTO GetByName(string name);

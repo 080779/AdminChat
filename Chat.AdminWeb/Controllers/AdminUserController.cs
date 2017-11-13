@@ -1,4 +1,5 @@
-﻿using Chat.IService.Interface;
+﻿using Chat.DTO.DTO;
+using Chat.IService.Interface;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -17,8 +18,8 @@ namespace Chat.AdminWeb.Controllers
 
         public ActionResult List()
         {
-            adminUserService.GetAll();
-            return View();
+            AdminUserDTO[] dtos= adminUserService.GetAll();
+            return View(dtos);
         }
     }
 }
