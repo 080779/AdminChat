@@ -4,12 +4,9 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Chat.Service.Entities
+namespace Chat.DTO.DTO
 {
-    /// <summary>
-    /// 试卷实体类
-    /// </summary>
-    public class TestPaperEntity:BaseEntity
+    public class TestPaperDTO:BaseDTO
     {
         public string TestTitle { get; set; }
     }

@@ -16,8 +16,8 @@ namespace Chat.Service.Entities
         public string PasswordSalt { get; set; }
         public string PasswordHash { get; set; }
         public string Email { get; set; }
-        public long? CityId { get; set; }
-        public virtual CityEntity City { get; set; }
+        //public long? CityId { get; set; }
+        //public virtual CityEntity City { get; set; }
         public int LoginErrorTimes { get; set; }
         public DateTime? LastLoginErrorTime { get; set; }
         public virtual ICollection<RoleEntity> Roles { get; set; } = new List<RoleEntity>();

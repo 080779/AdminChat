@@ -5,6 +5,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using Chat.DTO.DTO;
+using Chat.Service.Entities;
 
 namespace Chat.Service.Service
 {
@@ -12,7 +13,15 @@ namespace Chat.Service.Service
     {
         public long AddNew(long adminUserId, string message)
         {
-            throw new NotImplementedException();
+            using (MyDbContext dbc = new MyDbContext())
+            {
+                AdminLogEntity adminLog = new AdminLogEntity();
+                adminLog.AdminUserId = adminUserId;
+                adminLog.Message = message;
+                dbc.AdminLogs.Add(adminLog);
+                dbc.SaveChanges();
+                return adminLog.Id;
+            }
         }
     }
 }

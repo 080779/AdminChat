@@ -1,4 +1,4 @@
-﻿@model long
+﻿
 @{
     Layout = null;
 }
@@ -9,11 +9,25 @@
 <head>
     <meta name="viewport" content="width=device-width" />
     <title>Index</title>
+    <script src="~/js/jquery-1.8.3.min.js"></script>
+    <script type="text/javascript">
+        $(function () {
+            $("#btnOk").click(function () {
+                $.ajax({
+                    url: "/main/jsontest", type: "post",
+                    success: function (result)
+                    {
+                        
+                    },
+                    error: function () { alert("网络错误");}
+                });
+            });
+        })
+    </script>
 </head>
 <body>
     <div> 
-        jkijk
-        <div>@Model</div>
+        <div><input type="button" id="btnOk"value="提交" /></div>
     </div>
 </body>
 </html>

@@ -114,6 +114,7 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="Global.asax" />
+    <Content Include="js\jquery-1.8.3.min.js" />
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>

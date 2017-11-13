@@ -5,6 +5,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using Chat.DTO.DTO;
+using Chat.Service.Entities;
 
 namespace Chat.Service.Service
 {
@@ -12,7 +13,20 @@ namespace Chat.Service.Service
     {
         public long AddNew(string name, string description)
         {
-            throw new NotImplementedException();
+            using (MyDbContext dbc = new MyDbContext())
+            {
+                CommonService<PermissionEntity> cs = new CommonService<PermissionEntity>(dbc);
+                if(cs.GetAll().Any(p=>p.Name==name))
+                {
+                    return -1;
+                }
+                PermissionEntity permission = new PermissionEntity();
+                permission.Name = name;
+                permission.Description = description;
+                dbc.Permissions.Add(permission);
+                dbc.SaveChanges();
+                return permission.Id;
+            }
         }
 
         public void AddPermissionIds(long roleId, long[] permissionIds)

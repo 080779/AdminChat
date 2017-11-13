@@ -12,7 +12,7 @@ namespace Chat.Service.Service
 {
     public class AdminUserService : IAdminUserService
     {
-        public long AddAdminUser(string name, string phoneNum, string password, string email, long? cityId)
+        public long AddAdminUser(string name, string phoneNum, string password, string email)
         {
             AdminUserEntity user = new AdminUserEntity();
             user.Name = name;
@@ -22,7 +22,7 @@ namespace Chat.Service.Service
             user.LoginErrorTimes = 0;
             //user.LastLoginErrorTime = DateTime.Now;
             user.Email = email;
-            user.CityId = cityId;
+            //user.CityId = cityId;
             using (MyDbContext dbc = new MyDbContext())
             {
                 CommonService<AdminUserEntity> cs = new CommonService<AdminUserEntity>(dbc);

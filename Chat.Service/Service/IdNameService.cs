@@ -6,6 +6,7 @@ using System.Text;
 using System.Threading.Tasks;
 using Chat.DTO.DTO;
 using Chat.DTO;
+using Chat.Service.Entities;
 
 namespace Chat.Service.Service
 {
@@ -13,7 +14,16 @@ namespace Chat.Service.Service
     {
         public long AddNew(string typeName, string name, string imgUrl)
         {
-            throw new NotImplementedException();
+            using (MyDbContext dbc = new MyDbContext())
+            {
+                IdNameEntity idName = new IdNameEntity();
+                idName.TypeName = typeName;
+                idName.Name = name;
+                idName.ImgUrl = imgUrl;
+                dbc.IdNames.Add(idName);
+                dbc.SaveChanges();
+                return idName.Id;
+            }
         }
 
         public IdNameDTO[] GetAll()

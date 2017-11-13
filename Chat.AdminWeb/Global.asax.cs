@@ -2,6 +2,7 @@
 using Autofac.Integration.Mvc;
 using Chat.AdminWeb.App_Start;
 using Chat.IService;
+using Chat.WebCommon;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -16,6 +17,11 @@ namespace Chat.AdminWeb
     {
         protected void Application_Start()
         {
+            ModelBinders.Binders.Add(typeof(string), new TrimToDBCModelBinder());
+            ModelBinders.Binders.Add(typeof(int), new TrimToDBCModelBinder());
+            ModelBinders.Binders.Add(typeof(long), new TrimToDBCModelBinder());
+            ModelBinders.Binders.Add(typeof(double), new TrimToDBCModelBinder());
+
             log4net.Config.XmlConfigurator.Configure();
 
             var builder = new ContainerBuilder();//把当前程序集中的 Controller 都注册,不要忘了.PropertiesAutowired()            
@@ -31,6 +37,7 @@ namespace Chat.AdminWeb
             DependencyResolver.SetResolver(new AutofacDependencyResolver(container));
 
             GlobalFilters.Filters.Add(new SYSExceptionFilter());
+            GlobalFilters.Filters.Add(new JsonNetActionFilter());
 
             AreaRegistration.RegisterAllAreas();
             RouteConfig.RegisterRoutes(RouteTable.Routes);

@@ -41,12 +41,16 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="BaseDTO.cs" />
+    <Compile Include="DTO\ActivityDTO.cs" />
+    <Compile Include="DTO\ActivityImgDTO.cs" />
     <Compile Include="DTO\AdminLogDTO.cs" />
     <Compile Include="DTO\AdminUserDTO.cs" />
     <Compile Include="DTO\CityDTO.cs" />
+    <Compile Include="DTO\ExercisesDTO.cs" />
     <Compile Include="DTO\PermissionDTO.cs" />
     <Compile Include="DTO\RoleDTO.cs" />
     <Compile Include="DTO\SettingDTO.cs" />
+    <Compile Include="DTO\TestPaperDTO.cs" />
     <Compile Include="DTO\UserDTO.cs" />
     <Compile Include="DTO\IdNameDTO.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

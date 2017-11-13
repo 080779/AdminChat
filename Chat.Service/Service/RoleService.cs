@@ -5,6 +5,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using Chat.DTO.DTO;
+using Chat.Service.Entities;
 
 namespace Chat.Service.Service
 {
@@ -12,7 +13,19 @@ namespace Chat.Service.Service
     {
         public long AddNew(string roleName)
         {
-            throw new NotImplementedException();
+            using (MyDbContext dbc = new MyDbContext())
+            {
+                CommonService<RoleEntity> cs = new CommonService<RoleEntity>(dbc);
+                if(cs.GetAll().Any(r=>r.Name==roleName))
+                {
+                    return -1;
+                }
+                RoleEntity role = new RoleEntity();
+                role.Name = roleName;
+                dbc.Roles.Add(role);
+                dbc.SaveChanges();
+                return role.Id;
+            }
         }
 
         public void AddRoleIds(long adminUserId, long[] roleIds)
